@@ -24,7 +24,7 @@ RHT.to:SetScript("OnUpdate", function (self, elapse)
 			GetLearnedStones()
 			if RHTInitialized then
 				SetRandomHearthToy()
-				print "RHT initialized"
+				print "HearthstoneRandomizer initialized"
 				RHT.to:SetScript("OnUpdate", nil)
 			else
 				timeOut = 1
