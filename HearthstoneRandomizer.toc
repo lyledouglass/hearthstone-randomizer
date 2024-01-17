@@ -1,0 +1,6 @@
+## Interface: 100205
+## Title: Random Hearth Toy
+## Author: Nollychi - fork of Hemco's Random Hearth Toy addon
+## Version: 1.0
+
+HearthstoneRandomizer.lua
