@@ -1,5 +1,5 @@
 ## Interface: 100205
-## Title: Random Hearth Toy
+## Title: Hearthstone Randomizer
 ## Author: Nollychi - fork of Hemco's Random Hearth Toy addon
 
 HearthstoneRandomizer.lua
