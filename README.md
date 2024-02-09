@@ -1,4 +1,4 @@
-# Hearthstone-Randmonizer
+# Hearthstone-Randomizer
 
 This World of Warcraft addon creates a macro that dynamically randomizes your hearthstone toys, selecting a new one each time so you're always surprised which one you use! This addon is a fork of the `random-hearthstone-toy` (see credits below). It has been updated to create a macro rather than using a hidden button, and has been updated to include newer hearthstone toys as well as the removal of Convenant specific restrictions that were outdated.
 
