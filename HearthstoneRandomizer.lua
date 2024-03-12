@@ -88,6 +88,7 @@ AllHearthToyIndex[190196] = 366945 --Enlightened
 AllHearthToyIndex[209035] = 422284 --Larodar Flame
 AllHearthToyIndex[200630] = 391042 --Windsage
 AllHearthToyIndex[193588] = 375357 --Timewalker's
+AllHearthToyIndex[212337] = 431644 --Stone of the Hearth
 
 
 -- This is the meat right here.
