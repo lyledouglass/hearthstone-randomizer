@@ -21,7 +21,7 @@ RHT.to:SetScript("OnUpdate", function (self, elapse)
       if RHTInitialized then
         SetRandomHearthToy()
         -- Debug output
-        -- print "HearthstoneRandomizer initialized"
+        if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","RHT Initialized") end
         RHT.to:SetScript("OnUpdate", nil)
       else
         timeOut = 1
@@ -135,7 +135,10 @@ end
 -- and it creates a new one.
 function GetMacro()
   macroExists = GetMacroIndexByName("RHT")
-  if macroExists then
+  if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Macro index: " .. macroExists) end
+  if macroExists == 0 then
+    RHTIndex = false
+  else
     RHTIndex = macroExists
   end
 end
@@ -145,11 +148,11 @@ function GenMacro(itemID, toyName)
   if RHTIndex then
     EditMacro(RHTIndex, "RHT", "INV_MISC_QUESTIONMARK", "#showtooltip item:" .. itemID .. "\r/cast " .. toyName)
     -- Debug output
-    -- print "Macro updated"
+    if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Macro updated") end
   else
     CreateMacro("RHT", "INV_MISC_QUESTIONMARK", "#showtooltip item:" .. itemID .. "\r/cast " .. toyName)
     -- Debug output
-    -- print "Macro created"
+    if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Macro created") end
     GetMacro()
   end
 end
