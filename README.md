@@ -6,6 +6,10 @@ This World of Warcraft addon creates a macro that dynamically randomizes your he
 
 After installing the addon and loading up World of Warcraft, a new macro will be created in your macro list called "RHT". This macro will automatically randomize a hearthstone toy. After clicking the macro, it will select a different random hearthstone toy from your inventory and update the macro to use that one instead.
 
+## Debugging
+
+If you are encountering issues, please submit an issue on Github. To help with debugging, please include any info from Bugsack, and download the DebugLog addon. Once WoW is open, run `/dl` and click on the HearthstoneRandomizer tab. Copy the contents of the tab and include it in your issue.
+
 ## Installation
 
 This addon is not yet available on CurseForge, so you'll need to install it manually, or via the Github link installer on the WoWUp installer. To install manually, download the latest release from the [releases page](https://github.com/lyledouglass/hearthstone-randomizer/releases) and extract the contents to your `World of Warcraft\_retail_\Interface\AddOns` folder.
