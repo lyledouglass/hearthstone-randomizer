@@ -135,11 +135,12 @@ end
 -- and it creates a new one.
 function GetMacro()
   macroExists = GetMacroIndexByName("RHT")
-  if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Macro index: " .. macroExists) end
   if macroExists == 0 then
     RHTIndex = false
+    if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Macro is 0, index is: " .. RHTIndex) end
   else
     RHTIndex = macroExists
+    if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Macro is not 0, index is: " .. RHTIndex) end
   end
 end
 
