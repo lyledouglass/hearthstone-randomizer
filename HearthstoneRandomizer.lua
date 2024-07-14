@@ -44,6 +44,8 @@ local function Event(self, event, arg1, arg2, arg3)
   end
   -- When a spell cast stops and it's the player's spell, send the ID to check if it's a stone.
   if event == "UNIT_SPELLCAST_STOP" and arg1 == "player" then
+    if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Spellcast stopped") end
+    if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Spell ID of current spell: " ..arg3) end
     SpellcastUpdate(arg3)
   end
 end
@@ -78,26 +80,32 @@ AllHearthToyIndex[190196] = 366945 --Enlightened
 AllHearthToyIndex[209035] = 422284 --Larodar Flame
 AllHearthToyIndex[200630] = 391042 --Windsage
 AllHearthToyIndex[193588] = 375357 --Timewalker's
-AllHearthToyIndex[212337] = 431644 --Stone of the Hearth
+AllHearthToyIndex[212337] = 401802 --Stone of the Hearth - 401802 is the spell ID for the standard hearthstone but its consistently returned for this toy?
 
 
 -- This is the meat right here.
 function SetRandomHearthToy()
   -- Find the macro.
   GetMacro()
+  if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Macro got - setting random hearthstone") end
   -- Rebuild the stone list if it's empty.
   if next(UsableHearthToyIndex) == nil then
     GetLearnedStones()
   end
-  local itemID, toyName = ''
+  local itemID, toyName = '',''
   -- Randomly pick one.
   local k = RandomKey(UsableHearthToyIndex)
+  if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Random Hearthstone itemId: " ..k) end
   local itemID, toyName = C_ToyBox.GetToyInfo(k)
   if toyName then
+    if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Random Hearthstone toy: " ..toyName) end
     -- Remove it from the list so we don't pick it again.
     RemoveStone(k)
     -- Write the macro.
     GenMacro(itemID, toyName)
+  else
+    if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Random Hearthstone toy did not get set") end
+    if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Faulting stones itemID: " ..itemID) end
   end
 end
 
@@ -118,6 +126,7 @@ function GetLearnedStones()
     for k in pairs(AllHearthToyIndex) do
       if k == C_ToyBox.GetToyFromIndex(i) then
         UsableHearthToyIndex [k] = 1
+        if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Usable Hearthstone found: " ..k) end
       end
     end
   end
@@ -137,7 +146,7 @@ function GetMacro()
   macroExists = GetMacroIndexByName("RHT")
   if macroExists == 0 then
     RHTIndex = false
-    if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Macro is 0, index is: " .. RHTIndex) end
+    if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","macroExists is 0, index is null") end
   else
     RHTIndex = macroExists
     if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Macro is not 0, index is: " .. RHTIndex) end
@@ -146,7 +155,7 @@ end
 
 -- Macro writing time.
 function GenMacro(itemID, toyName)
-  if RHTIndex then
+  if RHTIndex ~= false then
     EditMacro(RHTIndex, "RHT", "INV_MISC_QUESTIONMARK", "#showtooltip item:" .. itemID .. "\r/cast " .. toyName)
     -- Debug output
     if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Macro updated") end
@@ -168,6 +177,7 @@ function SpellcastUpdate(spellID)
 if not InCombatLockdown() then
   for k in pairs(AllHearthToyIndex) do
     if spellID == AllHearthToyIndex[k] then
+      if DLAPI then DLAPI.DebugLog("HearthstoneRandomizer","Stone used: " ..k) end
       SetRandomHearthToy()
       break
     end
