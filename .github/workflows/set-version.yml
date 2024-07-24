@@ -3,8 +3,7 @@ on:
   push:
     branches:
       - main
-    paths-ignore:
-      - '.github/**'
+
 env:
   GITHUB_TOKEN: ${{ secrets.WOW_PAT }}
 jobs:
