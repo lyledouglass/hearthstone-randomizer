@@ -1,4 +1,4 @@
-## Interface: 100206
+## Interface: 110000
 ## Title: Hearthstone Randomizer
 ## Author: Nollychi - fork of Hemco's Random Hearth Toy addon
 
