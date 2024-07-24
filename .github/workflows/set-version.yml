@@ -19,12 +19,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.WOW_PAT }}
 
       - name: Get next version
         id: version
         uses: ietf-tools/semver-action@v1.8.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.WOW_PAT }}
           branch: ${{ github.ref }}
           noVersionBumpBehavior: 'current'
 

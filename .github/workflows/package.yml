@@ -12,9 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Addon
-        uses: actions/Checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.WOW_PAT }}
 
       - name: Package and Release
         uses: BigWigsMods/packager@master
