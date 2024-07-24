@@ -1,0 +1,34 @@
+name: Set Version
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/**'
+
+jobs:
+  get-version:
+    outputs:
+      bump: ${{ steps.version.outputs.bump }}
+      next: ${{ steps.version.outputs.next }}
+      current: ${{ steps.version.outputs.current }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get next version
+        id: version
+        uses: ietf-tools/semver-action@v1.8.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+          noVersionBumpBehavior: 'current'
+
+      - name: Tag version
+        if: ${{ steps.version.outputs.bump != '' }}
+        shell: bash
+        run: git tag ${{ steps.version.outputs.next }} && git push --tags
