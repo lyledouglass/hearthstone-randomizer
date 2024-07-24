@@ -30,7 +30,7 @@ the codebase, and builds are succeeding
 In order to have a clean and readable commit history, this repository
 requires the use of [ConventionalCommits](https://www.conventionalcommits.org/en/v1.0.0/).
 Using conventional commits will allow for automatic versioning and
-changelog generation as well
+changelog generation
 
 ## Credits
 
