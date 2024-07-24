@@ -16,6 +16,22 @@ This addon is not yet available on CurseForge, so you'll need to install it manu
 
 To install via WoWUp, click the "Install from URL" button and paste the following URL: `https://github.com/lyledouglass/hearthstone-randomizer`
 
+## Contributing
+
+### Pull Requests
+
+Every change in the codebase should be done via pull requests. This
+applies to everyone, including the project maintainers. This is to
+ensure that every change is reviewed and discussed before it goes into
+the codebase, and builds are succeeding
+
+### Conventional Commits
+
+In order to have a clean and readable commit history, this repository
+requires the use of [ConventionalCommits](https://www.conventionalcommits.org/en/v1.0.0/).
+Using conventional commits will allow for automatic versioning and
+changelog generation as well
+
 ## Credits
 
 This addon was forked from the `random-hearthstone-toy` addon created by Hemco under the MIT license. The original addon can be found [here](https://www.curseforge.com/wow/addons/random-hearthstone-toy```).
