@@ -12,7 +12,9 @@ If you are encountering issues, please submit an issue on Github. To help with d
 
 ## Installation
 
-This addon is not yet available on CurseForge, so you'll need to install it manually, or via the Github link installer on the WoWUp installer. To install manually, download the latest release from the [releases page](https://github.com/lyledouglass/hearthstone-randomizer/releases) and extract the contents to your `World of Warcraft\_retail_\Interface\AddOns` folder.
+This addon is now available on Wago.io! [Click here to install via Wago.io](https://addons.wago.io/addons/hearthstone-randomizer)
+
+To install it manually, or via the Github link installer on the WoWUp installer, download the latest release from the [releases page](https://github.com/lyledouglass/hearthstone-randomizer/releases) and extract the contents to your `World of Warcraft\_retail_\Interface\AddOns` folder.
 
 To install via WoWUp, click the "Install from URL" button and paste the following URL: `https://github.com/lyledouglass/hearthstone-randomizer`
 
