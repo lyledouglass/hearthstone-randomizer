@@ -81,6 +81,7 @@ AllHearthToyIndex[209035] = 422284 --Larodar Flame
 AllHearthToyIndex[200630] = 391042 --Windsage
 AllHearthToyIndex[193588] = 375357 --Timewalker's
 AllHearthToyIndex[212337] = 401802 --Stone of the Hearth - 401802 is the spell ID for the standard hearthstone but its consistently returned for this toy?
+AllHearthToyIndex[228940] = 463481 --Notorious Thread's Hearthstone
 
 
 -- This is the meat right here.
