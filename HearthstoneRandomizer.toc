@@ -1,4 +1,4 @@
-## Interface: 110002
+## Interface: 110100
 ## Title: Hearthstone Randomizer
 ## Author: Nollychi - fork of Hemco's Random Hearth Toy addon
 ## X-Wago-ID: n6VPRWGd
