@@ -83,7 +83,7 @@ AllHearthToyIndex[193588] = 375357 --Timewalker's
 AllHearthToyIndex[212337] = 401802 --Stone of the Hearth - 401802 is the spell ID for the standard hearthstone but its consistently returned for this toy?
 AllHearthToyIndex[228940] = 463481 --Notorious Thread's Hearthstone
 AllHearthToyIndex[236687] = 1220729 --Explosive Hearthstone
-
+AllHearthToyIndex[235016] = 1217281 --Redeployment Module
 
 -- This is the meat right here.
 function SetRandomHearthToy()
