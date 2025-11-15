@@ -1,4 +1,4 @@
-## Interface: 120000
+## Interface: 110107, 120000
 ## Title: Hearthstone Randomizer
 ## Author: Nollychi
 ## X-Wago-ID: n6VPRWGd
