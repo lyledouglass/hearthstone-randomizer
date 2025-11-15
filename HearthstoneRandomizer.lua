@@ -74,7 +74,7 @@ end
 -- Macro creation / updating
 local function UpdateRandomMacro(itemID)
     if InCombatLockdown() then
-        print("|cFFFF0000[HearthstoneRandomizer]|r Cannot update macro in combat!")
+        -- print("|cFFFF0000[HearthstoneRandomizer]|r Cannot update macro in combat!")
         return
     end
 
@@ -83,10 +83,10 @@ local function UpdateRandomMacro(itemID)
 
     if macroIndex == 0 then
         CreateMacro(MACRO_NAME, "INV_MISC_QUESTIONMARK", body, true)
-        print("|cFF00FF00[HearthstoneRandomizer]|r Created macro:", MACRO_NAME)
+        -- print("|cFF00FF00[HearthstoneRandomizer]|r Created macro:", MACRO_NAME) */
     else
         EditMacro(macroIndex, MACRO_NAME, "INV_MISC_QUESTIONMARK", body)
-        print("|cFF00FF00[HearthstoneRandomizer]|r Updated macro:", MACRO_NAME)
+        -- print("|cFF00FF00[HearthstoneRandomizer]|r Updated macro:", MACRO_NAME)
     end
 end
 
@@ -95,7 +95,7 @@ local function randomize()
     local id = pickRandomID()
     if not id then return end
     UpdateRandomMacro(id)
-    print("|cFF00FF00[HearthstoneRandomizer]|r Randomized to:", id)
+    -- print("|cFF00FF00[HearthstoneRandomizer]|r Randomized to:", id)
 end
 
 -- Slash Commands
@@ -135,7 +135,7 @@ frame:SetScript("OnEvent", function(self, event, unit, spell)
         if id then
             UpdateRandomMacro(id)
         end
-        print("|cFF00FF00[HearthstoneRandomizer]|r Loaded! Drag macro |cFFFFFF00RandomHearth|r to your bars.")
+        -- print("|cFF00FF00[HearthstoneRandomizer]|r Loaded! Drag macro |cFFFFFF00RandomHearth|r to your bars.")
         return
     end
 
