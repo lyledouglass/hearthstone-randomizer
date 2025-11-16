@@ -1,5 +1,11 @@
 # Hearthstone-Randomizer
 
+## Breaking change ##
+
+The macro name has changed to `RandomHearth` from the old `RHT`
+
+## Introduction
+
 This World of Warcraft addon creates a macro that dynamically randomizes your hearthstone toys, selecting a new one each time so you're always surprised which one you use! This addon started as a fork of the `random-hearthstone-toy` (see credits below). It has been updated and refactored completely for Midnight!
 
 ## Usage
