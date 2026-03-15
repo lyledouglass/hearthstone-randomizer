@@ -2,5 +2,6 @@
 ## Title: Hearthstone Randomizer
 ## Author: Nollychi
 ## X-Wago-ID: n6VPRWGd
+## X-Curse-Project-ID: 1487093
 
 HearthstoneRandomizer.lua
