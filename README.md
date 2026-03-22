@@ -16,7 +16,11 @@ If you find that a specific hearthstone toy is missing, please submit an issue v
 
 ## Installation
 
-This addon is now available on Wago.io! [Click here to install via Wago.io](https://addons.wago.io/addons/hearthstone-randomizer)
+This addon is now available on Wago.io and Curseforge! 
+
+[Click here to install via Wago.io](https://addons.wago.io/addons/hearthstone-randomizer)
+
+[Click here to install via Curseforge](https://www.curseforge.com/wow/addons/hearthstone-randomizer)
 
 To install it manually, or via the Github link installer on the WoWUp installer, download the latest release from the [releases page](https://github.com/lyledouglass/hearthstone-randomizer/releases) and extract the contents to your `World of Warcraft\_retail_\Interface\AddOns` folder.
 
@@ -34,7 +38,7 @@ the codebase, and builds are succeeding
 ### Conventional Commits
 
 In order to have a clean and readable commit history, this repository
-requires the use of [ConventionalCommits](https://www.conventionalcommits.org/en/v1.0.0/).
+requires the use of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
 Using conventional commits will allow for automatic versioning and
 changelog generation
 
