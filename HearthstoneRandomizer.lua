@@ -36,7 +36,8 @@ local DEFAULT_IDS = {
   236687, --Explosive Hearthstone
   235016, --Redeployment Module
   246565, --Cosmic Hearthstone
-  245970  --P.O.S.T. Master's Express Hearthstone
+  245970,  --P.O.S.T. Master's Express Hearthstone
+  263933   --Preyseeker's Hearthstone
 }
 
 local available = {}
